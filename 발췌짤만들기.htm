@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>o(*≧▽≦)ツ┏━┓</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/mona.css');
+  @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css');
+
+  @font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-display:swap;}
+  @font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-display:swap;}
+  @font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:swap;}
+  @font-face{font-family:'SuitKr';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');font-weight:400;font-display:swap;}
+  @font-face{font-family:'SuitKr';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');font-weight:700;font-display:swap;}
+  @font-face{font-family:'HanlimMyungjo';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymMjo-Regular.woff2') format('woff2');font-weight:400;font-display:swap;}
+  @font-face{font-family:'HanlimMyungjo';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymMjo-Bold.woff2') format('woff2');font-weight:700;font-display:swap;}
+  @font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');font-weight:400;font-display:swap;}
+  @font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');font-weight:700;font-display:swap;}
+  @font-face{font-family:'OwnglyphParkDahyeon';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');font-weight:400;font-display:swap;}
+  @font-face{font-family:'Sukmyung';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2409-2@1.0/SMUSnowflake-Regular.woff2') format('woff2');font-weight:400;font-display:swap;}
+  @font-face{font-family:'Sukmyung';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2409-2@1.0/SMUSnowflake-Bold.woff2') format('woff2');font-weight:700;font-display:swap;}
+  @font-face{font-family:'KoreanFrenchTypewriter';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/KoreanFrenchTypewriter.woff') format('woff');font-weight:400;font-display:swap;}
+  @font-face{font-family:'YdestreetB';src:url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetB.woff2') format('woff2');font-weight:400;font-display:swap;}
+  @font-face{font-family:'KerisKedyuche';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_R.woff2') format('woff2');font-weight:400;font-display:swap;}
+  @font-face{font-family:'KerisKedyuche';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_B.woff2') format('woff2');font-weight:700;font-display:swap;}
+
+  :root{
+    --ink:#2e2429; --wine:#8c3a4b; --wine-deep:#6e2c3a; --wine-soft:#b76d7b;
+    --gold:#c9a15a;
+    --paper:#f6efe3; --panel:#fffdf8; --line:#ecdfd0; --line-soft:#f1e6d6; --muted:#a2938a;
+    --shadow-sm:0 2px 8px rgba(110,44,58,.06);
+    --shadow-md:0 10px 24px rgba(110,44,58,.10);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper);background-image:radial-gradient(circle at 12% 8%, rgba(140,58,75,.05), transparent 45%),radial-gradient(circle at 92% 90%, rgba(201,161,90,.07), transparent 40%);font-family:'Pretendard',sans-serif;color:var(--ink);min-height:100vh;}
+  ::selection{background:rgba(140,58,75,.18);}
+  ::-webkit-scrollbar{width:9px;height:9px;}
+  ::-webkit-scrollbar-track{background:transparent;}
+  ::-webkit-scrollbar-thumb{background:#e3d3c1;border-radius:8px;border:2px solid var(--panel);}
+  ::-webkit-scrollbar-thumb:hover{background:var(--wine-soft);}
+
+  .topbar{display:flex;align-items:center;gap:11px;padding:17px 28px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--panel),#fdf7ee);box-shadow:0 1px 0 rgba(255,255,255,.6) inset;}
+  .logo-mark{font-family:'HanlimMyungjo',serif;font-size:23px;color:var(--wine);line-height:1;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(155deg,#fbeee8,#f6e2d8);box-shadow:var(--shadow-sm);flex-shrink:0;}
+  .topbar h1{font-family:'HanlimMyungjo',serif;font-size:21px;font-weight:700;margin:0;letter-spacing:-0.01em;background:linear-gradient(100deg,var(--wine-deep),var(--wine) 60%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .topbar span{color:var(--muted);font-size:12px;margin-left:6px;padding-left:12px;border-left:1px solid var(--line);}
+  @media (max-width: 640px){.topbar span{display:none;}}
+  .layout{display:grid;grid-template-columns:336px 1fr;min-height:calc(100vh - 68px);}
+  @media (max-width: 900px){.layout{grid-template-columns:1fr;}}
+
+  .controls{background:var(--panel);border-right:1px solid var(--line);padding:18px 16px 88px;overflow-y:auto;max-height:calc(100vh - 68px);}
+  .section{margin-bottom:14px;padding:15px 15px 16px;border:1px solid var(--line-soft);border-radius:15px;background:#fffdfa;box-shadow:var(--shadow-sm);transition:box-shadow .2s;}
+  .section:hover{box-shadow:var(--shadow-md);}
+  .section h2{font-size:12px;font-weight:700;color:var(--wine-deep);margin:0 0 12px;padding-bottom:9px;border-bottom:1px solid var(--line-soft);display:flex;align-items:center;gap:7px;letter-spacing:.02em;}
+  .section h2::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+  .row{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;align-items:center;}
+  .row:last-child{margin-bottom:0;}
+  .row label{font-size:12px;color:var(--muted);min-width:54px;font-weight:500;}
+  select,input[type=text]{font-family:inherit;font-size:13px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);transition:border-color .15s, box-shadow .15s;}
+  select:focus,input[type=text]:focus{outline:none;border-color:var(--wine-soft);box-shadow:0 0 0 3px rgba(140,58,75,.09);}
+  input[type=color]{width:30px;height:28px;border:1px solid var(--line);border-radius:8px;padding:2px;background:#fff;cursor:pointer;}
+  input[type=range]{width:100%;accent-color:var(--wine);}
+  .btn{font-family:inherit;font-size:12.5px;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:all .15s;}
+  .btn:hover{border-color:var(--wine-soft);color:var(--wine);box-shadow:var(--shadow-sm);}
+  .btn.active{background:linear-gradient(155deg,var(--wine),var(--wine-deep));border-color:var(--wine-deep);color:#fff;box-shadow:0 4px 10px rgba(140,58,75,.25);}
+  .seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;width:fit-content;}
+  .seg button{border:none;background:#fff;padding:7px 12px;font-size:13px;cursor:pointer;color:var(--ink);border-right:1px solid var(--line);transition:background .15s,color .15s;}
+  .seg button:last-child{border-right:none;}
+  .seg button:hover{background:#faf1ec;}
+  .seg button.active{background:linear-gradient(155deg,var(--wine),var(--wine-deep));color:#fff;}
+  .stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:9px;overflow:hidden;}
+  .stepper button{width:28px;height:30px;border:none;background:#fff;cursor:pointer;font-size:15px;color:var(--wine-deep);transition:background .15s;}
+  .stepper button:hover{background:#f6ece7;}
+  .stepper input[type=number]{width:50px;text-align:center;border:none;border-left:1px solid var(--line);border-right:1px solid var(--line);padding:6px 2px;font-size:13px;-moz-appearance:textfield;}
+  .stepper input[type=number]::-webkit-inner-spin-button,.stepper input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}
+  .tpl-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;}
+  .tpl-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;height:62px;display:flex;align-items:center;justify-content:center;font-size:10.5px;color:#fff;font-weight:600;text-align:center;position:relative;transition:transform .15s, box-shadow .15s;letter-spacing:.01em;}
+  .tpl-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
+  .tpl-card.selected{outline:2px solid var(--wine);outline-offset:2px;box-shadow:var(--shadow-md);}
+  .tpl-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.16),transparent 55%);}
+  .tpl-card span{position:relative;z-index:1;}
+  .tpl1{background:linear-gradient(155deg,#fffaf3,#f3e6da);color:#9c7f78;border:1px solid #eee;}
+  .tpl1::after{display:none;}
+  .tpl2{background:linear-gradient(165deg,#1c1c1c,#3a3a3a);}
+  .tpl3{background:linear-gradient(135deg,#5b3f9e,#8a5fc9);}
+  .subpanel{display:none;padding-top:11px;border-top:1px dashed var(--line);margin-top:5px;}
+  .subpanel.show{display:block;}
+  .hint{font-size:11px;color:var(--muted);line-height:1.55;margin-top:7px;}
+  .hint code{background:#f3e9df;padding:1px 5px;border-radius:5px;color:var(--wine-deep);}
+  .ratio-row{display:flex;gap:6px;flex-wrap:wrap;}
+  .file-drop{border:1px dashed var(--line);border-radius:10px;padding:13px;text-align:center;font-size:12px;color:var(--muted);cursor:pointer;transition:all .15s;}
+  .file-drop:hover{border-color:var(--wine);color:var(--wine);background:#fdf6f2;}
+  .export-bar{position:sticky;bottom:0;background:linear-gradient(0deg,var(--panel) 60%,rgba(255,253,248,0));padding:14px 0 0;}
+  .export-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--wine),var(--wine-deep));color:#fff;border:none;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;box-shadow:0 8px 20px rgba(140,58,75,.3);letter-spacing:.02em;transition:transform .15s, box-shadow .15s;}
+  .export-btn:hover{background:linear-gradient(135deg,var(--wine-deep),#5a2330);transform:translateY(-1px);box-shadow:0 10px 24px rgba(140,58,75,.36);}
+  .export-btn:active{transform:translateY(0);}
+
+  .preview-area{
+    display:flex;align-items:center;justify-content:center;padding:40px;
+    background:
+      linear-gradient(45deg,#eee2d1 25%,transparent 25%) -10px 0/22px 22px,
+      linear-gradient(-45deg,#eee2d1 25%,transparent 25%) -10px 0/22px 22px,
+      linear-gradient(45deg,transparent 75%,#eee2d1 75%) -10px 0/22px 22px,
+      linear-gradient(-45deg,transparent 75%,#eee2d1 75%) -10px 0/22px 22px,
+      var(--paper);
+    overflow:auto;
+  }
+  .card-wrap{filter:drop-shadow(0 22px 46px rgba(46,36,41,.28));transition:filter .2s;}
+  #card{width:420px;aspect-ratio:1/1;position:relative;overflow:hidden;background:#ffffff;display:flex;flex-direction:column;}
+  .bg-color-layer{position:absolute;inset:0;z-index:0;}
+  .bg-image-layer{position:absolute;inset:-5%;z-index:0;background-size:cover;background-position:center;width:110%;height:110%;}
+  .bg-overlay{position:absolute;inset:0;z-index:1;}
+
+  /* content-wrap handles vertical centering; #content stays a plain (non-flex) editable block
+     so browser formatting commands never get confused by a flex layout context. */
+  .content-wrap{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;overflow:hidden;}
+  .content{
+    outline:none;
+    padding:6% 12%;
+    font-size:16.5px;
+    line-height:1.9;
+    word-break:keep-all;
+    white-space:pre-wrap;
+  }
+  .content em{font-style:italic;}
+  .content strong{font-weight:700;}
+  .content .hl{
+    background-image:linear-gradient(var(--hl),var(--hl));
+    background-repeat:no-repeat;
+    background-size:100% 50%;
+    background-position:0 68%;
+    -webkit-box-decoration-break:clone;
+    box-decoration-break:clone;
+  }
+  .footer{position:relative;z-index:2;padding:0 12% 8%;display:flex;flex-direction:column;gap:2px;font-size:9px;}
+  .footer .fo-title{font-weight:700;font-size:1.05em;}
+  .footer .fo-author{opacity:.7;font-size:.85em;}
+  .footer.align-right{align-items:flex-end;text-align:right;}
+  .footer.align-left{align-items:flex-start;text-align:left;}
+  .footer.with-rule{border-top:1px solid rgba(255,255,255,.25);padding-top:12px;margin:0 12% 8%;padding-left:0;padding-right:0;width:auto;}
+
+  #bubbleToolbar{position:fixed;display:none;align-items:center;gap:4px;background:linear-gradient(155deg,var(--wine-deep),#5a2330);padding:6px 8px;border-radius:12px;box-shadow:0 14px 32px rgba(0,0,0,.32);z-index:999;}
+  #bubbleToolbar.show{display:flex;}
+  #bubbleToolbar .bb{width:28px;height:28px;border-radius:8px;border:none;background:transparent;color:#fbf1ee;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;}
+  #bubbleToolbar .bb:hover{background:rgba(255,255,255,.16);}
+  #bubbleToolbar .divider{width:1px;height:18px;background:rgba(255,255,255,.2);margin:0 2px;}
+  #bubbleToolbar .dot{width:16px;height:16px;border-radius:50%;cursor:pointer;border:1px solid rgba(255,255,255,.35);display:inline-block;}
+  #bubbleToolbar .dot.eraser{display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--wine-deep);background:#fff;}
+  #bubbleToolbar .dot-wrap{display:flex;gap:4px;align-items:center;}
+  #bubbleToolbar label.colorpicker{width:20px;height:20px;border-radius:50%;cursor:pointer;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.4);background:conic-gradient(red,yellow,lime,cyan,blue,magenta,red);}
+  #bubbleToolbar label.colorpicker input{position:absolute;opacity:0;width:1px;height:1px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="logo-mark">❝</span>
+  <h1>발췌를 합시다</h1>
+  <span>문장을 드래그하면 서식 도구가 바로 나타나요</span>
+</div>
+
+<div class="layout">
+  <div class="controls">
+
+    <div class="section">
+      <h2>템플릿</h2>
+      <div class="tpl-grid">
+        <div class="tpl-card tpl1 selected" data-tpl="1"><span>담담한 종이</span></div>
+        <div class="tpl-card tpl2" data-tpl="2"><span>어둠의 밤</span></div>
+        <div class="tpl-card tpl3" data-tpl="3"><span>보랏빛 노을</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>비율</h2>
+      <div class="ratio-row">
+        <button class="btn active" data-ratio="1/1">1:1</button>
+        <button class="btn" data-ratio="3/4">3:4</button>
+        <button class="btn" data-ratio="4/5">4:5</button>
+        <button class="btn" data-ratio="4/3">4:3</button>
+        <button class="btn" data-ratio="9/16">9:16</button>
+        <button class="btn" data-ratio="16/9">16:9</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>배경</h2>
+      <div class="seg" id="bgTabs">
+        <button class="active" data-bgtype="color">단색</button>
+        <button data-bgtype="gradient">그라디언트</button>
+        <button data-bgtype="image">이미지</button>
+      </div>
+      <div class="subpanel show" id="panel-color">
+        <div class="row"><label>색상</label><input type="color" id="bgColor" value="#ffffff"></div>
+      </div>
+      <div class="subpanel" id="panel-gradient">
+        <div class="row"><label>색상 1</label><input type="color" id="gradColor1" value="#5b3f9e"></div>
+        <div class="row"><label>색상 2</label><input type="color" id="gradColor2" value="#8a5fc9"></div>
+        <div class="row"><label>각도</label><input type="range" id="gradAngle" min="0" max="360" value="135"></div>
+      </div>
+      <div class="subpanel" id="panel-image">
+        <div class="file-drop" id="imgDrop">이미지를 선택하거나 드래그하세요</div>
+        <input type="file" id="imgInput" accept="image/*" style="display:none;">
+        <div class="row" style="margin-top:10px;"><label>흐림</label><input type="range" id="imgBlur" min="0" max="20" value="0"></div>
+        <div class="row"><label>투명도</label><input type="range" id="imgOpacity" min="0" max="100" value="100"></div>
+        <div class="row"><label>어둡게</label><input type="range" id="imgDark" min="0" max="80" value="0"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>텍스트</h2>
+      <div class="row">
+        <label>폰트</label>
+        <select id="fontFamily" style="flex:1;">
+          <optgroup label="기본 고딕">
+            <option value="'Pretendard', sans-serif">프리텐다드</option>
+            <option value="'SuitKr', sans-serif">수트</option>
+          </optgroup>
+          <optgroup label="세리프 · 붓글씨">
+            <option value="'HanlimMyungjo', serif">한림명조</option>
+            <option value="'LXGW WenKai', serif">LXGW 문해체</option>
+          </optgroup>
+          <optgroup label="손글씨">
+            <option value="'OwnglyphParkDahyeon', sans-serif">온글잎 박다현체</option>
+            <option value="'KerisKedyuche', sans-serif">케리스 케듀체</option>
+          </optgroup>
+          <optgroup label="디스플레이 · 포인트">
+            <option value="'Paperozi', sans-serif">페이퍼로지</option>
+            <option value="'Sukmyung', sans-serif">숙명눈꽃체</option>
+            <option value="'YdestreetB', sans-serif">Y드스트릿체</option>
+          </optgroup>
+          <optgroup label="레트로">
+            <option value="'KoreanFrenchTypewriter', monospace">타자기체</option>
+            <option value="'Mona12', monospace">Mona12 (픽셀)</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="row">
+        <label>크기</label>
+        <div class="stepper">
+          <button id="fsMinus" type="button">−</button>
+          <input type="number" id="fontSize" value="17" min="8" max="60">
+          <button id="fsPlus" type="button">+</button>
+        </div>
+      </div>
+      <div class="row"><label>줄간격</label><input type="range" id="lineHeight" min="120" max="260" value="190"></div>
+      <div class="row"><label>기본색</label><input type="color" id="fontColor" value="#2e2429"></div>
+      <div class="row">
+        <label>정렬</label>
+        <div class="seg" id="alignSeg">
+          <button data-align="left" class="active">왼쪽</button>
+          <button data-align="center">가운데</button>
+          <button data-align="right">오른쪽</button>
+        </div>
+      </div>
+      <div class="row">
+        <label>세로정렬</label>
+        <div class="seg" id="vAlignSeg">
+          <button data-valign="flex-start">위</button>
+          <button data-valign="center" class="active">가운데</button>
+          <button data-valign="flex-end">아래</button>
+        </div>
+      </div>
+      <div class="hint">문장을 드래그로 선택하면 굵게·기울임·형광펜·글자색 도구가 바로 뜹니다. <code>*기울임*</code>, <code>**굵게**</code> 는 입력하면 자동 변환돼요.</div>
+    </div>
+
+    <div class="section">
+      <h2>하단 정보</h2>
+      <div class="row"><label>캐릭터명</label><input type="text" id="cardTitle" placeholder="예: 빠삐코" style="flex:1;"></div>
+      <div class="row"><label>제작자명</label><input type="text" id="cardAuthor" placeholder="예: 흡연하는비흡연자" style="flex:1;"></div>
+      <div class="row">
+        <label>크기</label>
+        <div class="stepper">
+          <button id="ffsMinus" type="button">−</button>
+          <input type="number" id="footerFontSize" value="9" min="6" max="24">
+          <button id="ffsPlus" type="button">+</button>
+        </div>
+      </div>
+      <div class="hint">본문 크기와는 별개로 하단 정보 크기만 독립적으로 조절돼요. (비율을 바꾸면 둘 다 함께 스케일됩니다)</div>
+    </div>
+
+    <div class="export-bar">
+      <button class="export-btn" id="exportBtn">이미지로 저장 (PNG)</button>
+    </div>
+  </div>
+
+  <div class="preview-area">
+    <div class="card-wrap">
+      <div id="card">
+        <div class="bg-color-layer" id="bgColorLayer"></div>
+        <div class="bg-image-layer" id="bgImageLayer"></div>
+        <div class="bg-overlay" id="bgOverlay"></div>
+        <div class="content-wrap" id="contentWrap">
+          <div class="content" id="content" contenteditable="true" spellcheck="false">도은하｜네가 해주는 건 전부 좋아. 장난도 좋고, 이것도 좋고. 그러니까, 전부 다 해줘. 장승현.</div>
+        </div>
+        <div class="footer align-right" id="footer">
+          <div class="fo-title" id="foTitle">빠삐코</div>
+          <div class="fo-author" id="foAuthor">흡연하는비흡연자</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="bubbleToolbar">
+  <button class="bb" id="bbBold" title="굵게"><b>B</b></button>
+  <button class="bb" id="bbItalic" title="기울임"><i>I</i></button>
+  <button class="bb" id="bbUnderline" title="밑줄"><u>U</u></button>
+  <button class="bb" id="bbStrike" title="취소선"><s>S</s></button>
+  <div class="divider"></div>
+  <div class="dot-wrap" id="highlightDots">
+    <span class="dot hl-dot" style="background:#ffe27a" data-color="#ffe27a" title="형광펜"></span>
+    <span class="dot hl-dot" style="background:#ffb6c9" data-color="#ffb6c9" title="형광펜"></span>
+    <span class="dot hl-dot" style="background:#a8e6cf" data-color="#a8e6cf" title="형광펜"></span>
+    <span class="dot hl-dot" style="background:#c9b6ff" data-color="#c9b6ff" title="형광펜"></span>
+    <label class="colorpicker" title="형광펜 직접 선택"><input type="color" id="bbHighlightCustom"></label>
+    <span class="dot eraser" id="bbHighlightErase" title="형광펜 지우기">✕</span>
+  </div>
+  <div class="divider"></div>
+  <div class="dot-wrap" id="colorDots">
+    <span class="dot fc-dot" style="background:#2e2429" data-color="#2e2429" title="글자색"></span>
+    <span class="dot fc-dot" style="background:#c0392b" data-color="#c0392b" title="글자색"></span>
+    <span class="dot fc-dot" style="background:#8c3a4b" data-color="#8c3a4b" title="글자색"></span>
+    <span class="dot fc-dot" style="background:#ffffff" data-color="#ffffff" title="글자색"></span>
+    <label class="colorpicker" title="글자색 직접 선택"><input type="color" id="bbColorCustom"></label>
+  </div>
+</div>
+
+<script>
+const card = document.getElementById('card');
+const contentWrap = document.getElementById('contentWrap');
+const content = document.getElementById('content');
+const bgColorLayer = document.getElementById('bgColorLayer');
+const bgImageLayer = document.getElementById('bgImageLayer');
+const bgOverlay = document.getElementById('bgOverlay');
+const footer = document.getElementById('footer');
+const foTitle = document.getElementById('foTitle');
+const foAuthor = document.getElementById('foAuthor');
+const bubble = document.getElementById('bubbleToolbar');
+
+/* ---------- background ---------- */
+document.querySelectorAll('#bgTabs button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#bgTabs button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.subpanel').forEach(p=>p.classList.remove('show'));
+    document.getElementById('panel-'+btn.dataset.bgtype).classList.add('show');
+    applyBackground();
+  });
+});
+let bgImageData=null;
+function applyBackground(){
+  const bgType = document.querySelector('#bgTabs button.active').dataset.bgtype;
+  if(bgType==='color'){
+    bgColorLayer.style.background = document.getElementById('bgColor').value;
+    bgImageLayer.style.backgroundImage='none';
+    bgOverlay.style.background='transparent';
+  } else if(bgType==='gradient'){
+    const c1=document.getElementById('gradColor1').value;
+    const c2=document.getElementById('gradColor2').value;
+    const ang=document.getElementById('gradAngle').value;
+    bgColorLayer.style.background=`linear-gradient(${ang}deg, ${c1}, ${c2})`;
+    bgImageLayer.style.backgroundImage='none';
+    bgOverlay.style.background='transparent';
+  } else if(bgType==='image'){
+    bgColorLayer.style.background='#111';
+    if(bgImageData){ bgImageLayer.style.backgroundImage=`url(${bgImageData})`; }
+    const blur = document.getElementById('imgBlur').value;
+    const opacity = document.getElementById('imgOpacity').value/100;
+    const dark = document.getElementById('imgDark').value/100;
+    bgImageLayer.style.filter = `blur(${blur}px)`;
+    bgImageLayer.style.opacity = opacity;
+    bgOverlay.style.background = `rgba(0,0,0,${dark})`;
+  }
+}
+['bgColor','gradColor1','gradColor2','gradAngle','imgBlur','imgOpacity','imgDark'].forEach(id=>{
+  document.getElementById(id).addEventListener('input', applyBackground);
+});
+document.getElementById('imgDrop').addEventListener('click', ()=>document.getElementById('imgInput').click());
+document.getElementById('imgInput').addEventListener('change', e=>{
+  const file = e.target.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ev=>{ bgImageData = ev.target.result; document.getElementById('imgDrop').textContent = file.name; applyBackground(); };
+  reader.readAsDataURL(file);
+});
+['dragover','drop'].forEach(evt=>document.getElementById('imgDrop').addEventListener(evt, e=>e.preventDefault()));
+document.getElementById('imgDrop').addEventListener('drop', e=>{
+  const file = e.dataTransfer.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ev=>{ bgImageData = ev.target.result; document.getElementById('imgDrop').textContent = file.name; applyBackground(); };
+  reader.readAsDataURL(file);
+});
+
+/* ---------- ratio + auto font scaling ----------
+   본문 크기(baseFontSize)는 사용자가 직접 조절하는 값이고,
+   하단정보(baseFooterSize)는 별도 고정값이다.
+   ratioScale 만 두 값에 공통으로 곱해져서, 비율을 바꿀 때만 함께 움직인다. */
+let baseFontSize = 17;
+let baseFooterSize = 9;
+let ratioScale = 1;
+function ratioToScale(ratioStr){
+  const [w,h] = ratioStr.split('/').map(Number);
+  const heightPx = 420 * (h/w);
+  let scale = Math.sqrt(heightPx/420);
+  return Math.max(0.8, Math.min(1.35, scale));
+}
+function applyFontScale(){
+  content.style.fontSize = (baseFontSize * ratioScale) + 'px';
+  footer.style.fontSize = (baseFooterSize * ratioScale) + 'px';
+}
+document.querySelectorAll('[data-ratio]').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('[data-ratio]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    card.style.aspectRatio = btn.dataset.ratio;
+    ratioScale = ratioToScale(btn.dataset.ratio);
+    applyFontScale();
+  });
+});
+
+/* ---------- font size stepper ---------- */
+const fontSizeInput = document.getElementById('fontSize');
+function setBaseFontSize(v){
+  v = Math.max(8, Math.min(60, Math.round(v)));
+  baseFontSize = v;
+  fontSizeInput.value = v;
+  applyFontScale();
+}
+fontSizeInput.addEventListener('input', ()=>{ setBaseFontSize(parseFloat(fontSizeInput.value)||17); });
+document.getElementById('fsMinus').addEventListener('click', ()=> setBaseFontSize(baseFontSize-1));
+document.getElementById('fsPlus').addEventListener('click', ()=> setBaseFontSize(baseFontSize+1));
+
+/* ---------- footer size stepper (independent from body font stepper) ---------- */
+const footerFontSizeInput = document.getElementById('footerFontSize');
+function setBaseFooterSize(v){
+  v = Math.max(6, Math.min(24, Math.round(v)));
+  baseFooterSize = v;
+  footerFontSizeInput.value = v;
+  applyFontScale();
+}
+footerFontSizeInput.addEventListener('input', ()=>{ setBaseFooterSize(parseFloat(footerFontSizeInput.value)||9); });
+document.getElementById('ffsMinus').addEventListener('click', ()=> setBaseFooterSize(baseFooterSize-1));
+document.getElementById('ffsPlus').addEventListener('click', ()=> setBaseFooterSize(baseFooterSize+1));
+
+/* ---------- global text settings ---------- */
+document.getElementById('fontFamily').addEventListener('change', e=>{
+  content.style.fontFamily = e.target.value;
+  footer.style.fontFamily = e.target.value;
+});
+document.getElementById('lineHeight').addEventListener('input', e=>{
+  content.style.lineHeight = (e.target.value/100);
+});
+document.getElementById('fontColor').addEventListener('input', e=>{
+  content.style.color = e.target.value;
+  footer.style.color = e.target.value;
+});
+document.querySelectorAll('#alignSeg button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#alignSeg button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    content.style.textAlign = btn.dataset.align;
+  });
+});
+document.querySelectorAll('#vAlignSeg button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#vAlignSeg button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    contentWrap.style.justifyContent = btn.dataset.valign;
+  });
+});
+
+/* ---------- floating bubble toolbar ---------- */
+let savedRange = null;
+function updateBubblePosition(){
+  const sel = window.getSelection();
+  if(!sel.rangeCount || sel.isCollapsed){ bubble.classList.remove('show'); return; }
+  const range = sel.getRangeAt(0);
+  if(!content.contains(range.commonAncestorContainer)){ bubble.classList.remove('show'); return; }
+  savedRange = range.cloneRange();
+  const rect = range.getBoundingClientRect();
+  if(rect.width===0 && rect.height===0){ bubble.classList.remove('show'); return; }
+  bubble.classList.add('show');
+  const bw = bubble.offsetWidth || 280;
+  let left = rect.left + rect.width/2 - bw/2;
+  left = Math.max(8, Math.min(left, window.innerWidth - bw - 8));
+  let top = rect.top - 44;
+  if(top < 8) top = rect.bottom + 10;
+  bubble.style.left = left + 'px';
+  bubble.style.top = top + 'px';
+}
+document.addEventListener('selectionchange', ()=>{
+  const sel = window.getSelection();
+  if(sel.rangeCount && !sel.isCollapsed && content.contains(sel.getRangeAt(0).commonAncestorContainer)){
+    updateBubblePosition();
+  } else if(!bubble.matches(':hover')) {
+    bubble.classList.remove('show');
+  }
+});
+function restoreSelection(){
+  if(!savedRange) return null;
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(savedRange);
+  return savedRange;
+}
+bubble.addEventListener('mousedown', e=>{ if(e.target.closest('.bb')) e.preventDefault(); });
+document.getElementById('bbBold').addEventListener('click', ()=>{ restoreSelection(); document.execCommand('bold'); });
+document.getElementById('bbItalic').addEventListener('click', ()=>{ restoreSelection(); document.execCommand('italic'); });
+document.getElementById('bbUnderline').addEventListener('click', ()=>{ restoreSelection(); document.execCommand('underline'); });
+document.getElementById('bbStrike').addEventListener('click', ()=>{ restoreSelection(); document.execCommand('strikeThrough'); });
+
+/* manually wrap the selection in a styled <span> instead of execCommand,
+   so the browser never promotes the selection into a block-level node. */
+function wrapSelectionSpan(styleSetter, className){
+  const range = restoreSelection();
+  if(!range) return;
+  const span = document.createElement('span');
+  if(className) span.className = className;
+  styleSetter(span);
+  try{
+    range.surroundContents(span);
+  }catch(e){
+    const frag = range.extractContents();
+    span.appendChild(frag);
+    range.insertNode(span);
+  }
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  const nr = document.createRange();
+  nr.selectNodeContents(span);
+  nr.collapse(false);
+  sel.addRange(nr);
+  savedRange = null;
+}
+
+document.querySelectorAll('#highlightDots .hl-dot').forEach(dot=>{
+  dot.addEventListener('mousedown', e=>e.preventDefault());
+  dot.addEventListener('click', ()=>{
+    wrapSelectionSpan(span=>span.style.setProperty('--hl', dot.dataset.color), 'hl');
+  });
+});
+document.getElementById('bbHighlightCustom').addEventListener('input', e=>{
+  wrapSelectionSpan(span=>span.style.setProperty('--hl', e.target.value), 'hl');
+});
+document.getElementById('bbHighlightErase').addEventListener('mousedown', e=>e.preventDefault());
+document.getElementById('bbHighlightErase').addEventListener('click', ()=>{
+  const range = restoreSelection();
+  if(!range) return;
+  const hls = content.querySelectorAll('.hl');
+  hls.forEach(el=>{
+    if(range.intersectsNode(el)){
+      const parent = el.parentNode;
+      while(el.firstChild) parent.insertBefore(el.firstChild, el);
+      parent.removeChild(el);
+    }
+  });
+  content.normalize();
+  savedRange = null;
+});
+
+document.querySelectorAll('#colorDots .fc-dot').forEach(dot=>{
+  dot.addEventListener('mousedown', e=>e.preventDefault());
+  dot.addEventListener('click', ()=>{
+    wrapSelectionSpan(span=>span.style.color = dot.dataset.color, null);
+  });
+});
+document.getElementById('bbColorCustom').addEventListener('input', e=>{
+  wrapSelectionSpan(span=>span.style.color = e.target.value, null);
+});
+
+document.addEventListener('mousedown', e=>{
+  if(!bubble.contains(e.target) && e.target !== content && !content.contains(e.target)){
+    bubble.classList.remove('show');
+  }
+});
+
+/* ---------- auto *italic* / **bold** (always on) ---------- */
+function convertMark(node, caret, start, innerText, tagName){
+  const full = node.nodeValue;
+  const before = full.slice(0, start);
+  const after = full.slice(caret);
+  const el = document.createElement(tagName);
+  el.textContent = innerText;
+  const beforeNode = document.createTextNode(before);
+  const afterNode = document.createTextNode(after.length ? after : '\u200B');
+  const parent = node.parentNode;
+  parent.replaceChild(afterNode, node);
+  parent.insertBefore(el, afterNode);
+  parent.insertBefore(beforeNode, el);
+  const newRange = document.createRange();
+  newRange.setStart(afterNode, 0);
+  newRange.collapse(true);
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(newRange);
+}
+/* ---------- prevent browser's default Enter behavior from wrapping lines in <div>
+   (which promotes inline .hl / color spans into block-level elements that stretch
+   full width). Insert a plain newline text node instead — matches the flat
+   text + white-space:pre-wrap design used everywhere else in this editor. */
+content.addEventListener('keydown', e=>{
+  if(e.key !== 'Enter' || e.isComposing) return;
+  e.preventDefault();
+  const sel = window.getSelection();
+  if(!sel.rangeCount) return;
+  const range = sel.getRangeAt(0);
+  range.deleteContents();
+  const nl = document.createTextNode('\n');
+  range.insertNode(nl);
+  const newRange = document.createRange();
+  newRange.setStartAfter(nl);
+  newRange.collapse(true);
+  sel.removeAllRanges();
+  sel.addRange(newRange);
+});
+
+content.addEventListener('input', ()=>{
+  const sel = window.getSelection();
+  if(!sel.rangeCount) return;
+  const range = sel.getRangeAt(0);
+  const node = range.startContainer;
+  if(node.nodeType !== 3) return;
+  const caret = range.startOffset;
+  const textBefore = node.nodeValue.slice(0, caret);
+
+  const mBold = /\*\*([^*]+)\*\*$/.exec(textBefore);
+  if(mBold){
+    const start = caret - mBold[0].length;
+    convertMark(node, caret, start, mBold[1], 'strong');
+    return;
+  }
+  const mItalic = /(^|[^*])\*([^*]+)\*$/.exec(textBefore);
+  if(mItalic){
+    const asteriskLen = mItalic[0].length - mItalic[1].length;
+    const start = caret - asteriskLen;
+    convertMark(node, caret, start, mItalic[2], 'em');
+  }
+});
+
+/* ---------- templates (style presets only) ---------- */
+document.querySelectorAll('.tpl-card').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('.tpl-card').forEach(x=>x.classList.remove('selected'));
+    t.classList.add('selected');
+    applyTemplate(t.dataset.tpl);
+  });
+});
+function setBgTab(type){
+  document.querySelectorAll('#bgTabs button').forEach(b=>b.classList.toggle('active', b.dataset.bgtype===type));
+  document.querySelectorAll('.subpanel').forEach(p=>p.classList.remove('show'));
+  document.getElementById('panel-'+type).classList.add('show');
+}
+function setAlign(v){
+  content.style.textAlign = v;
+  document.querySelectorAll('#alignSeg button').forEach(b=>b.classList.toggle('active', b.dataset.align===v));
+}
+function applyTemplate(n){
+  footer.className = 'footer';
+  if(n==='1'){
+    setBgTab('color');
+    document.getElementById('bgColor').value = '#ffffff';
+    document.getElementById('fontFamily').value = "'Pretendard', sans-serif";
+    document.getElementById('fontColor').value = '#2e2429';
+    document.getElementById('lineHeight').value = 190;
+    content.style.fontFamily = "'Pretendard', sans-serif";
+    content.style.lineHeight = 1.9;
+    content.style.color = '#2e2429';
+    setBaseFontSize(17);
+    setAlign('left');
+    footer.classList.add('align-right');
+    footer.style.color = '#2e2429';
+    footer.style.fontFamily = "'Pretendard', sans-serif";
+  }
+  if(n==='2'){
+    setBgTab('image');
+    document.getElementById('imgDark').value = 40;
+    document.getElementById('imgBlur').value = 0;
+    document.getElementById('fontFamily').value = "'Pretendard', sans-serif";
+    document.getElementById('fontColor').value = '#ffffff';
+    document.getElementById('lineHeight').value = 180;
+    content.style.fontFamily = "'Pretendard', sans-serif";
+    content.style.lineHeight = 1.8;
+    content.style.color = '#ffffff';
+    setBaseFontSize(16);
+    setAlign('left');
+    footer.classList.add('align-left','with-rule');
+    footer.style.color = '#ffffff';
+    footer.style.fontFamily = "'Pretendard', sans-serif";
+  }
+  if(n==='3'){
+    setBgTab('gradient');
+    document.getElementById('gradColor1').value='#5b3f9e';
+    document.getElementById('gradColor2').value='#8a5fc9';
+    document.getElementById('gradAngle').value=135;
+    document.getElementById('fontFamily').value = "'Pretendard', sans-serif";
+    document.getElementById('fontColor').value = '#f3eefc';
+    document.getElementById('lineHeight').value = 200;
+    content.style.fontFamily = "'Pretendard', sans-serif";
+    content.style.lineHeight = 2.0;
+    content.style.color = '#f3eefc';
+    setBaseFontSize(17);
+    setAlign('left');
+    footer.classList.add('align-left');
+    footer.style.color = '#f3eefc';
+    footer.style.fontFamily = "'Pretendard', sans-serif";
+  }
+  applyBackground();
+}
+
+document.getElementById('cardTitle').addEventListener('input', e=>{ foTitle.textContent = e.target.value; });
+document.getElementById('cardAuthor').addEventListener('input', e=>{ foAuthor.textContent = e.target.value; });
+document.getElementById('cardTitle').value = '빠삐코';
+document.getElementById('cardAuthor').value = '흡연하는비흡연자';
+
+document.getElementById('exportBtn').addEventListener('click', async ()=>{
+  bubble.classList.remove('show');
+  const canvas = await html2canvas(card, {scale:3, useCORS:true, backgroundColor:null});
+  const link = document.createElement('a');
+  const name = document.getElementById('cardTitle').value || document.getElementById('cardAuthor').value || 'excerpt';
+  link.download = name + '.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+});
+
+/* init */
+applyBackground();
+applyFontScale();
+</script>
+</body>
+</html>
